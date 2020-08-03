@@ -1,0 +1,144 @@
+//
+// Pages: Login & Register
+//
+
+.login-logo,
+.register-logo {
+  font-size: 2.1rem;
+  font-weight: 300;
+  margin-bottom: .9rem;
+  text-align: center;
+
+  a {
+    color: $gray-700;
+  }
+}
+
+.login-page,
+.register-page {
+  align-items: center;
+  background: #5bcbf5;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.login-box,
+.register-box {
+  width: 360px;
+
+  @media (max-width: map-get($grid-breakpoints, sm)) {
+    margin-top: 20px;
+    width: 90%;
+  }
+}
+
+.login-card-body,
+.register-card-body {
+  background: $white;
+  border-top: 0;
+  color: #666;
+  padding: 20px;
+
+  .input-group {
+    .form-control {
+      border-right: 0;
+
+      &:focus {
+        box-shadow: none;
+
+        & ~ .input-group-append .input-group-text {
+          border-color: $input-focus-border-color;
+        }
+      }
+
+      &.is-valid {
+        &:focus {
+          box-shadow: none;
+        }
+
+        & ~ .input-group-append .input-group-text {
+          border-color: $success;
+        }
+      }
+
+      &.is-invalid {
+        &:focus {
+          box-shadow: none;
+        }
+
+        & ~ .input-group-append .input-group-text {
+          border-color: $danger;
+        }
+      }
+    }
+
+    .input-group-text {
+      background-color: transparent;
+      border-bottom-right-radius: $border-radius;
+      border-left: 0;
+      border-top-right-radius: $border-radius;
+      color: #777;
+      transition: $input-transition;
+    }
+  }
+}
+
+.login-box-msg,
+.register-box-msg {
+  margin: 0;
+  padding: 0 20px 20px;
+  text-align: center;
+}
+
+.social-auth-links {
+  margin: 10px 0;
+}
+
+
+.google-button {
+  height: 40px;
+  border-width: 0;
+  background: white;
+  color: #737373;
+  border-radius: 5px;
+  white-space: nowrap;
+  box-shadow: 1px 1px 0px 1px rgba(0,0,0,0.05);
+  transition-property: background-color, box-shadow;
+  transition-duration: 150ms;
+  transition-timing-function: ease-in-out;
+  padding: 0;
+  
+  &:focus,
+  &:hover {
+    box-shadow: 1px 4px 5px 1px rgba(0,0,0,0.1);
+  }
+  
+  &:active {
+    background-color: #e5e5e5;
+    box-shadow: none;
+    transition-duration: 10ms;
+  }
+}
+    
+.google-button__icon {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 8px 0 8px 8px;
+  width: 18px;
+  height: 18px;
+  box-sizing: border-box;
+}
+
+.google-button__icon--plus {
+  width: 27px;
+}
+
+.google-button__text {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 24px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Roboto',arial,sans-serif;
+}
